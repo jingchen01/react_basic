@@ -6,6 +6,8 @@ import Welcome from './components/Welcome.js';
 import Hello from './components/Hello.js';
 import Message_subscribe from './components/Message_subscribe.js';
 import Message_count from './components/Message_count.js';
+import Message_count2 from './components/Message_count2.js';
+
 
 class App extends Component {
    render(){
@@ -19,6 +21,7 @@ class App extends Component {
        {/*<Hello />*/}
        <Message_subscribe />
        <Message_count />
+       <Message_count2 />
        </div>
      ); 
    }

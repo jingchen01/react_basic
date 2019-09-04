@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class Message_count extends Component {
+class Message_count2 extends Component {
     constructor(props){
         /*Must call super constructor in derived class before accessing 'this' or returning from derived constructor*/
         super(props);
@@ -10,14 +10,11 @@ class Message_count extends Component {
     }
 
     /* function in js is executed asynchronously, use callback as second parameter to get updated value*/
-    increment(){
-        this.setState(
-            {
-                count: this.state.count + 1
-            },
-            () => {
-                console.log(this.state.count);
-            }
+    incrementFive(){
+        this.setState((prevState, props) => ({
+                count : prevState.count + 5 
+                }),
+             () => {console.log(this.state.count)}
         );
     }
 
@@ -25,11 +22,11 @@ class Message_count extends Component {
         return (
             <div>
                 <div>Count - {this.state.count}</div>
-                <button onClick={() => this.increment()}>increment</button>
+                <button onClick={() => this.incrementFive()}>increment</button>
             </div>
         );
     };
 
 }
 
-export default Message_count;
+export default Message_count2;
