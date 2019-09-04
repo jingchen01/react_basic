@@ -4,7 +4,8 @@ import './App.css';
 import {Greet01, Greet02} from './components/Greet.js';
 import Welcome from './components/Welcome.js';
 import Hello from './components/Hello.js';
-import Message from './components/Message.js';
+import Message_subscribe from './components/Message_subscribe.js';
+import Message_count from './components/Message_count.js';
 
 class App extends Component {
    render(){
@@ -14,9 +15,10 @@ class App extends Component {
         <Greet02 name="Smith"/> 
         <Greet02 name="William"/>
         <Greet02 name="Craig"/>*/}
-     { /*<Welcome /> */} 
+       { /*<Welcome /> */} 
        {/*<Hello />*/}
-       <Message />
+       <Message_subscribe />
+       <Message_count />
        </div>
      ); 
    }
