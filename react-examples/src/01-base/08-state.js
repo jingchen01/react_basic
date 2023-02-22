@@ -7,6 +7,15 @@ export default class App extends Component
         shouldAddToFavourite: true
     }
 
+    constructor() {
+        super();
+        this.state = {
+            shouldAddToFavourite_constructor: false,
+            username: 'User-1',
+            username2: 'User-2'
+        }
+    }
+
     render()
     {
         return (
@@ -23,7 +32,20 @@ export default class App extends Component
                         console.log('Remove from favourite');
                     }
                 }
-                }>{this.state.shouldAddToFavourite ? 'Add to favourite' : 'Remove from favourite'}</button>
+                }>{this.state.shouldAddToFavourite ? 'Add to favourite' : 'Remove from favourite'} by {this.state.username}</button>
+                <br/>
+                <button onClick={() => {
+                    this.setState({
+                        shouldAddToFavourite_constructor: !this.state.shouldAddToFavourite_constructor
+                    })
+
+                    if (this.state.shouldAddToFavourite_constructor) {
+                        console.log('Add to favourite (with state from constructor)');
+                    } else {
+                        console.log('Remove from favourite (with state from constructor)');
+                    }
+                }
+                }>{this.state.shouldAddToFavourite_constructor ? 'Add to favourite' : 'Remove from favourite'} by {this.state.username2}</button>
             </div>
         );
     }
