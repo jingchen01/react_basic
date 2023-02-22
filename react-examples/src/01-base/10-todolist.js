@@ -67,7 +67,7 @@ export default class App extends Component {
 
     return (
       <div>
-        <h1>Todolist</h1>
+        <h1>Todolist (add)</h1>
         <input ref={this.todoItemRef}></input>
         <button onClick={this.handleClick}>Add</button>
         <ul>{todolist}</ul>

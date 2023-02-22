@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './01-base/10-todolist'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./01-base/10-2-todolist";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   //<React.StrictMode>
-    <App />
+  <App />
   //</React.StrictMode>
 );
 
